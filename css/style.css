@@ -24,6 +24,7 @@ body {
   background-image: radial-gradient(#143283 1px, transparent 1px);
   background-size: 100px 100px;
   background-color: #ebf9ff;
+  overflow: hidden;
 }
 
 .welcome-page {
