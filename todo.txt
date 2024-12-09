@@ -1,2 +1,2 @@
 1.  Reveal player information after user guesses right
-2.  
+2.  Green when correct / Red when wrong

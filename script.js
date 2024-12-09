@@ -65,7 +65,7 @@ const countdownTimer = function () {
     count--;
 
     if (count === 0) {
-      // RESET COUNT BACK TO 10
+      // RESET COUNT BACK TO 15
       count = 15;
       generateRandomPlayerName('players.json').then(playerName => {
         getPlayerImage(playerName);
