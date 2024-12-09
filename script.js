@@ -3,6 +3,7 @@
 let letterL = document.querySelector('.tilt-letter-l');
 let playBtn = document.querySelector('.play-btn');
 let landingPage = document.querySelector('.welcome-page');
+let gameContainer = document.querySelector('.game-container');
 document.body.classList.add('home-body');
 letterL.style.transform = 'rotate(20deg)';
 let landingAnimation;
@@ -33,6 +34,7 @@ let playAgainBtn = document.querySelector('.play-again-btn');
 let playerTotalScoreArr = [];
 
 const animateLetter = function () {
+  gameContainer.style.display = 'none';
   landingAnimation = setInterval(function () {
     setInterval(function () {
       if (letterL.style.transform === 'rotate(20deg)') {
@@ -51,6 +53,7 @@ const playGame = function () {
   landingPage.style.display = 'none';
   document.body.classList.add('game-body');
   document.body.classList.remove('home-body');
+  gameContainer.style.display = 'flex';
 };
 
 playBtn.addEventListener('click', playGame);
