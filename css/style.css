@@ -117,15 +117,12 @@ h1 {
   justify-content: space-around;
 }
 
-/* .timer {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border-radius: 50%;
-} */
-
 .play-again {
   display: none;
+}
+
+.options-wrapper {
+  margin-bottom: 5rem;
 }
 
 .option {
