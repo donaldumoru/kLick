@@ -54,6 +54,12 @@ const playGame = function () {
   document.body.classList.add('game-body');
   document.body.classList.remove('home-body');
   gameContainer.style.display = 'flex';
+
+  generateRandomPlayerName('players.json').then(playerName => {
+    getPlayerImage(playerName);
+  });
+
+  countdownTimer();
 };
 
 playBtn.addEventListener('click', playGame);
@@ -81,8 +87,6 @@ const countdownTimer = function () {
     }
   }, 1000);
 };
-
-countdownTimer();
 
 // FUNCTION TO REMOVE WHITE BOX ON CLICK
 const makeBoxesTransparent = function (boxes) {
@@ -181,10 +185,6 @@ function getPlayerImage(name) {
     })
     .catch(error => console.error('Unable to fetch data:', error));
 }
-
-generateRandomPlayerName('players.json').then(playerName => {
-  getPlayerImage(playerName);
-});
 
 // FUNCTION TO DISPLAY PICTURE FROM FETCHED DATA
 const displayPicture = function (data) {
